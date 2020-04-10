@@ -36,8 +36,8 @@
 
 3./etc/ld.so.cache中缓存的路径。
 ---
-    /etc/ld.so.conf的第一行有一个引用命令：include ld.so.conf.d/*.conf, 所以可以通过修改/etc/ls.so.conf这个配置文件来增删路径,  
-    也可以增加一个.conf文件来配置特有的动态库路径。直接将寻库路径加进来即可，保存后需要运行一下ldconfig重载一下。
+    /etc/ld.so.conf的第一行有一个引用命令：include ld.so.conf.d/*.conf, 所以可以通过修改/etc/ls.so.conf这个配置文件来  
+    增删路径,也可以增加一个.conf文件来配置特有的动态库路径。直接将寻库路径加进来即可，保存后需要运行一下ldconfig重载一下。
 
 4.默认的/lib/和/usr/lib。
 --
