@@ -7,9 +7,11 @@
     搜索路径中添加新的目录。例如，如果在/home/justin/include/ 目录下有编译时所需要的头文件，为了让GCC能够顺利地找到它们，就可
     以使用 -I 选项：  
     gcc foo.c -I /home/justin/include -o foo  
+    
     同样，如果使用了不在标准位置的库文件，那么可以通过-L选项向GCC的库文件搜索路径中添加新的目录。例如，如果在 /home/xiaowp/lib/
     目录下有链接时所需要的库文件 libfoo.so ，为了让 GCC 能够顺利地找到它，可以使用下面的命令：  
     gcc foo.c -L /home/justin/lib -lfoo -o foo  
+    
     得好好解释一下的是-l选项，它指示GCC去连接库文件 libfoo.so 。Linux下的库文件在命名时有一个约定，那就是应该以lib 三个字母开头，  
     由于所有的库文件都遵循了同样的规范，因此在用-l 选项指定链接的库文件名时可以省去lib 三个字母，也就是说GCC 在对-lfoo 进行处理时，  
     会自动去链接名为libfoo.so。  
@@ -34,7 +36,8 @@
 
 3./etc/ld.so.cache中缓存的路径。
 ---
-    /etc/ld.so.conf的第一行有一个引用命令：include ld.so.conf.d/*.conf, 所以可以通过修改/etc/ls.so.conf这个配置文件来增删路径,也可以增加一个.conf文件来配置特有的动态库路径。直接将寻库路径加进来即可，保存后需要运行一下ldconfig重载一下。
+    /etc/ld.so.conf的第一行有一个引用命令：include ld.so.conf.d/*.conf, 所以可以通过修改/etc/ls.so.conf这个配置文件来增删路径,  
+    也可以增加一个.conf文件来配置特有的动态库路径。直接将寻库路径加进来即可，保存后需要运行一下ldconfig重载一下。
 
 4.默认的/lib/和/usr/lib。
 --
